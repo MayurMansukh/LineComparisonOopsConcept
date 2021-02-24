@@ -30,21 +30,28 @@ public class FanGeometry {
 
         return Math.sqrt((Math.pow(x2 - x1, 2)) + (Math.pow(y2 - y1, 2)));
     }
-    public static void main(String [] args) {
-        System.out.println("Welcome to Line comparision Computation Program on Master Branch");
+
+    public void check() {
         double lengthL2;
         double lengthL1;
-        FanGeometry obj=new FanGeometry();
+        FanGeometry obj = new FanGeometry();
 
-        lengthL1= obj.findlenghtL1();
-        lengthL2= obj.findlenghtL2();
-	
-	double Equals=lengthL1.equals(lengthL2)
-        if (Equals== True){
+        lengthL1 = obj.findlenghtL1();
+        lengthL2 = obj.findlenghtL2();
+        if (lengthL1 == lengthL2) {
             System.out.println("Lines are equals ");
-        }
-        else
+        } else {
             System.out.println("Lines are not equals");
+            if (lengthL1 > lengthL2) {
+                System.out.println("second Line is lesser ");
+            } else
+                System.out.println("second line is greater ");
+        }
+    }
 
+    public static void main(String [] args) {
+        System.out.println("Welcome to Line comparision Computation Program on Master Branch");
+            FanGeometry obj=new FanGeometry();
+            obj.check();
         }
     }
